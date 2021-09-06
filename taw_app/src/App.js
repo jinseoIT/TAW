@@ -4,7 +4,12 @@ import LandingPage from './components/LandingPage';
 import DetailPage from './components/DetailPage';
 import MapPage from './components/MapPage';
 import BulletinPage from './components/BulletinPage'
+
+import LoginPage from './components/LoginPage'
+import RegisterPage from './components/RegisterPage'
+
 import UploadPage from './components/admin/uploadPage';
+
 
 function App() {
   return (
@@ -14,7 +19,9 @@ function App() {
           <Route exact path="/"> <LandingPage /> </Route>
           <Route path="/detail"> <DetailPage /> </Route>
           <Route path="/map"> <MapPage/> </Route>
-          <Route path="/bulletin"> <BulletinPage /> </Route>
+          <Route path="/bulletin"> <BulletinPage/> </Route>
+          <Route path="/login"> <LoginPage/> </Route>
+          <Route path="/register"><RegisterPage/> </Route>
           <Route path="/admin/upload"> <UploadPage/> </Route>
         </Switch>
       </header>
