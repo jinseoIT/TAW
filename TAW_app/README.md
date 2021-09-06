@@ -1,4 +1,3 @@
-# TRAVEL AFTER WORK (TAW) 
+# TRAVEL AFTER WORK (TAW)
 
-
-
+## 2021.06.09 진행 List
