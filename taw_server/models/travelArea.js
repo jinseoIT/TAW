@@ -1,9 +1,9 @@
-import { v4 as uuidv4} from 'uuid';
+const { uuid } = require('uuidv4');
 
 const mongoose = require('mongoose');
 
 const travelAreaSchema = mongoose.Schema({
-  id: {
+  uuid: {
     type: String,
     maxlength: 30
   },
@@ -21,7 +21,7 @@ const travelAreaSchema = mongoose.Schema({
   },
   imgUrl: {
     type: String,
-    maxlength: 50
+    maxlength: 100
   },
   summary: {
     type: String,
@@ -42,9 +42,9 @@ const travelAreaSchema = mongoose.Schema({
 })
 
 travelAreaSchema.pre('save', function (next){
-  console.log(uuidv4);
+  console.log(uuid());
   const travelArea = this;
-  travelArea.id = uuidv4;
+  travelArea.uuid = uuid();
   next()
 })
 
