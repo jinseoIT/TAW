@@ -40,12 +40,8 @@ ul, li, ol {
    content: "";
 }
 
-@font-face {
-   font-family: 'notosans';
-   src: url('./font/NotoSansKR-Medium.otf');
-}
 
-/* HEADER */
+// HEADER
 .header {
    width: 100%;
    height: 95px;
@@ -92,6 +88,8 @@ ul, li, ol {
 }
 }
 
+// CONTENT
+
 .bg-img {
    background-image: url('img/333.jpeg');
    background-size: cover;
@@ -133,20 +131,26 @@ ul, li, ol {
    }
 
    .con-list ul li{
-      border: 1px solid #000;
       position: relative;
+      background-image: url('img/333.jpeg');
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 250px;
+      color: #fff;
+      font-size: 13px;
 
       .con-list-box {
          position: absolute;
-         bottom: 20px;
+         bottom: 24px;
          left: 20px;
 
          .con-list-box-txt {
-            border: 1px solid #000;
+            border: 1px solid #fff;
             border-radius: 80px;
-            margin-top: 10px;
+            margin-top: 8px;
             padding: 5px 15px;
-            font-size: 14px;
+            font-size: 12px;
          }
       }
       
@@ -154,6 +158,9 @@ ul, li, ol {
 
    
 }
+
+
+// FOOTER
 
 .footer-wrap {
    width: 100%;
