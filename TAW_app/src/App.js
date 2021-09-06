@@ -4,6 +4,8 @@ import LandingPage from './components/LandingPage';
 import DetailPage from './components/DetailPage';
 import MapPage from './components/MapPage';
 import BulletinPage from './components/BulletinPage'
+import LoginPage from './components/LoginPage'
+import RegisterPage from './components/RegisterPage'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/detail"> <DetailPage /> </Route>
           <Route path="/map"> <MapPage/> </Route>
           <Route path="/bulletin"> <BulletinPage/> </Route>
+          <Route path="/login"> <LoginPage/> </Route>
+          <Route path="/register"><RegisterPage/> </Route>
         </Switch>
       </header>
     </div>
