@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { TravelArea } = require("../models/travelArea")
+const multer = require('multer');
+const upload = multer({
+  dest : 'uploads/'
+});
 
 router.post('/add', (req, res) => {
 
@@ -14,5 +18,6 @@ router.post('/add', (req, res) => {
     })
   })
 })
+
 
 module.exports = router
