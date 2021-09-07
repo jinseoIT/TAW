@@ -15,7 +15,7 @@ function Footer() {
                             REPUBLIC OF KOREA<br/>
                         </div>
                         <div className="footer-info-tel">
-                            +82-010-1234-5678
+                            +82-010-1234-
                         </div>
                     </div>
                 </div>

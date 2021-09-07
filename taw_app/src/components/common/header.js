@@ -21,9 +21,6 @@ function Header() {
                         </div>
                     </div>
                 </header>
-                <div className="bg-img">
-
-                </div>
             </div>
         </div>
     )

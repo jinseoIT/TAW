@@ -1,0 +1,53 @@
+.detail-bg-img {
+   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/333.jpeg') ;
+   background-size: cover;
+   background-position: center;
+   width: 100vw;
+   height: 450px;
+   position: relative;
+
+   .detail-bg-txt {
+       position: absolute;
+       top: 50%;
+       left: 260px;
+       color: #fff;
+       z-index: 999;
+       font-size: 28px;
+       font-weight: 900;
+   }
+}
+
+.detail-wrap {
+    width: 1240px;
+    margin: 120px auto;
+
+    .detail-img img {
+        width: 1240px;
+        margin-bottom: 80px;
+    }
+
+    .detail-txt-box {
+        text-align: center;
+    }
+
+    .detail-tit {
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+
+    .detail-sum {
+        font-size: 22px;
+        margin-bottom: 60px;
+    }
+
+    .detail-desc {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+
+
