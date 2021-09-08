@@ -1,15 +1,19 @@
 import React from 'react'
+import ImageUpload from './ImageUpload'
+import TravelAdd from './TravelAdd'
 
-const uploadPage = () => {
+const UploadPage = () => {
+
   return (
     <>
-      <h2>업로드 페이지</h2>
-      <input type="text" />
-      <input type="text"/>
+      <h2 style={{"marginBottom" : "20px"}}>이미지 업로드</h2>
+      <ImageUpload />
+      <hr />
+      <TravelAdd />
     </>
   )
 }
 
-export default uploadPage
+export default UploadPage
 
 

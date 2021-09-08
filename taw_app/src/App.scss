@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 @font-face {
    font-family: 'notoSans';
    src: url('./fonts/NotoSansMonoCJKkr-Regular.otf') format('truetype');
 }
+=======
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif' };
+>>>>>>> 69af2716bd14155ca0339f3088c11209ad83d9b3
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,7 +20,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video, header, nav, footer, aside, article {
-    margin:0;
+   margin:0;
    padding:0;
    border:0; 
    font-style:inherit;
@@ -27,7 +31,6 @@ time, mark, audio, video, header, nav, footer, aside, article {
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
-   font-family: 'Noto Sans KR', serif;
 }
 
 a {
@@ -45,6 +48,7 @@ ul, li, ol {
    content: "";
 }
 
+<<<<<<< HEAD
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 
 
@@ -109,6 +113,8 @@ ul, li, ol {
    }
 }
 }
+=======
+>>>>>>> 69af2716bd14155ca0339f3088c11209ad83d9b3
 
 // CONTENT
 
@@ -186,46 +192,5 @@ ul, li, ol {
       
    }
 
-   
-}
-
-
-
-// FOOTER
-
-.footer-wrap {
-   width: 100%;
-   background: #373F41;
-
-   .footer {
-      width: 1240px;
-      height: 200px;
-      margin: 0 auto;
-      position: relative;
-
-      .footer-info {
-         position: absolute;
-         left: 30px;
-         top: 40px;
-         color: #fff;
-         padding-right: 100px;
-         border-right: 1px solid #fff;
-      }
-
-      div {
-         font-family: 'notosans';  
-      }
-
-      .footer-info-logo {
-         font-size: 40px;
-         padding-bottom: 20px;
-      }
-
-      .footer-info-addr,
-      .footer-info-tel {
-         font-size: 13px;
-         line-height: 20px;
-      }
-   }
    
 }
