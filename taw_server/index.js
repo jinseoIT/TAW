@@ -17,9 +17,8 @@ const storage = multer.memoryStorage({
   }
 })
 
-const upload = multer({ storage }).single('image')
+const upload = multer({ storage }).single('imgFile')
 app.post('/api/upload', upload, (req, res) => {
-  
   let travelFile = req.file.originalname.split(".")
   const fileType = travelFile[travelFile.length - 1]
   
@@ -31,7 +30,9 @@ app.post('/api/upload', upload, (req, res) => {
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
     Key: `${uuid()}.${fileType}`,
-    Body: req.file.buffer
+    Body: req.file.buffer,
+    ContentType: 'image/jpeg',
+    ACL : 'public-read'
   }
   console.log('param :', params)
   s3.upload(params, (error, data) => {
