@@ -3,14 +3,8 @@ import './DetailPage.scss'
 import Header from './common/Header'
 import axios from 'axios'
 
-<<<<<<< HEAD
 function DetailPage(props) {
     console.log(props)
-=======
-function DetailPage() { 
-
-    const uuid = 'f08b6e78-a83f-455f-9718-2d3566cd924a';
->>>>>>> 683006b7eaab256210c74e95d43806eb7f6e0d15
     const [detail, setDetail] = useState([
     
         {
@@ -60,11 +54,6 @@ function DetailPage() {
 
     ])
 
-<<<<<<< HEAD
-    useEffect(() => {
-        
-    }, [])
-=======
 
     useEffect(() => { 
         console.log('useEffect') 
@@ -81,7 +70,6 @@ function DetailPage() {
    
 
     
->>>>>>> 683006b7eaab256210c74e95d43806eb7f6e0d15
         
     
 
