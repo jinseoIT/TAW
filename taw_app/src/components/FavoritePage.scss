@@ -10,13 +10,21 @@
 
     .fav-con {
         .fav-con-wrap {
+            border-top: 2px solid #999;
+            border-left: 2px solid #999;
 
             div {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
-                grid-template-rows: 50px 50px;
-                font-family: 'notosans';  
+                font-family: 'notosans'; 
+                border-right: 2px solid #999;
+                
             }
+
+            .fav-con-list {
+                border-bottom: 2px solid #999;
+            }
+
             .fav-con-title {
                 background-color: #ddd;
             }
