@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 
 function Home() {
@@ -10,7 +11,7 @@ function Home() {
                     <div className="con-list">
                         <ul>
                             <li>
-                                <a href="javascript:;">
+                                <a href="#;">
                                     <div className="con-list-box">
                                         <div className="con-list-box-title">경주 동궁과 월지</div>
                                         <div className="con-list-box-txt">+ 더보기</div>

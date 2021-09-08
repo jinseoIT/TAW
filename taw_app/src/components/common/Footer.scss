@@ -1,0 +1,34 @@
+// FOOTER
+
+.footer-wrap {
+    width: 100%;
+    background: #373F41;
+
+    .footer {
+       width: 1240px;
+       height: 200px;
+       margin: 0 auto;
+       position: relative;
+
+       .footer-info {
+          position: absolute;
+          left: 30px;
+          top: 50px;
+          color: #fff;
+          padding-right: 100px;
+          border-right: 1px solid #fff;
+       }
+
+       .footer-info-logo {
+          font-size: 40px;
+          padding-bottom: 20px;
+       }
+
+       .footer-info-addr,
+       .footer-info-tel {
+          font-size: 13px;
+          line-height: 20px;
+       }
+    }
+    
+}
