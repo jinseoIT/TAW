@@ -14,12 +14,14 @@
        z-index: 999;
        font-size: 28px;
        font-weight: 900;
+       font-family: 'notosans';  
    }
 }
 
 .detail-wrap {
     width: 1240px;
     margin: 120px auto;
+    font-family: 'notoSans';
 
     .detail-img img {
         width: 1240px;
@@ -28,6 +30,10 @@
 
     .detail-txt-box {
         text-align: center;
+    }
+
+    div {
+        font-family: 'notosans';  
     }
 
     .detail-tit {

@@ -60,7 +60,7 @@ function DetailPage() {
         <div>
             <Header />
             <div className="detail-bg-img">
-    <div className="detail-bg-txt">{detail[3].title}</div>
+                <div className="detail-bg-txt">{detail[3].title}</div>
             </div>
             <div className="detail-wrap">
                 <div className="detail-img">

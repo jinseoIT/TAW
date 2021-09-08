@@ -40,6 +40,11 @@ ul, li, ol {
    content: "";
 }
 
+@font-face {
+   font-family: 'notoSans';
+   src: url('./fonts/NotoSansMonoCJKkr-Regular.otf') format('truetype');
+}
+
 
 // HEADER
 .header {
@@ -50,10 +55,12 @@ ul, li, ol {
    top: 0;
    left: 0;
    
+   
    .header-inner {
    position: relative;
    width: 1240px;
    margin: 0 auto;
+   
 
    // h1 {
    //    color: #fff;
@@ -63,17 +70,25 @@ ul, li, ol {
       color: #1CB1D7;
    }
 
+   h1 a {
+      font-family: 'notosans';  
+   }
+
    h1, nav {
       display: inline-block;
       margin: 40px 0 0 40px;
       vertical-align: middle;
+      
    }
 
    nav ul li {
       display: inline-block;
       margin-right: 20px;
       font-size: 18px;
-      font-family: 'notosans';
+      
+      a {
+         font-family: 'notosans';  
+      }
    }
 
    .sign-box {
@@ -83,6 +98,10 @@ ul, li, ol {
       ul li {
          display: inline-block;
          margin-left: 20px;
+         
+         a {
+            font-family: 'notosans';  
+         }
       }
    }
 }
@@ -101,6 +120,7 @@ ul, li, ol {
 .con-wrap {
    width: 1240px;
    margin: 100px auto 300px;
+   
 
    .more-button {
       background-color: #3BC9DB;
@@ -108,6 +128,7 @@ ul, li, ol {
       width: 100px;
       height: 30px;
       margin: 100px auto;
+      
 
       button {
          border: none;
@@ -120,6 +141,7 @@ ul, li, ol {
    .con-title {
       font-size: 23px;
       margin-bottom: 30px;
+      font-family: 'notoSans';
    }
 
    .con-list ul {
@@ -144,6 +166,10 @@ ul, li, ol {
          position: absolute;
          bottom: 24px;
          left: 20px;
+         
+         div {
+            font-family: 'notosans';  
+         }
 
          .con-list-box-txt {
             border: 1px solid #fff;
@@ -151,6 +177,7 @@ ul, li, ol {
             margin-top: 8px;
             padding: 5px 15px;
             font-size: 12px;
+            font-family: 'notoSans';
          }
       }
       
@@ -158,6 +185,7 @@ ul, li, ol {
 
    
 }
+
 
 
 // FOOTER
@@ -175,10 +203,14 @@ ul, li, ol {
       .footer-info {
          position: absolute;
          left: 30px;
-         top: 50px;
+         top: 40px;
          color: #fff;
          padding-right: 100px;
          border-right: 1px solid #fff;
+      }
+
+      div {
+         font-family: 'notosans';  
       }
 
       .footer-info-logo {
