@@ -72,7 +72,6 @@ function DetailPage() {
                     <div className="detail-desc">{detail[3].description}</div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
