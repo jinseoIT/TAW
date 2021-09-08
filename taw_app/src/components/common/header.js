@@ -1,4 +1,7 @@
+/* eslint-disable */
 import React from 'react'
+import '../common/Header.scss'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
@@ -22,7 +25,6 @@ function Header() {
                     </div>
                 </header>
                 <div className="bg-img">
-
                 </div>
             </div>
         </div>

@@ -4,17 +4,16 @@ import LandingPage from './components/LandingPage';
 import DetailPage from './components/DetailPage';
 import MapPage from './components/MapPage';
 import BulletinPage from './components/BulletinPage'
-
+import Header from './components/common/Header';
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
-
 import UploadPage from './components/admin/uploadPage';
-
+import Footer from './components/common/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <Header />
         <Switch>
           <Route exact path="/"> <LandingPage /> </Route>
           <Route path="/detail"> <DetailPage /> </Route>
@@ -24,7 +23,7 @@ function App() {
           <Route path="/register"><RegisterPage/> </Route>
           <Route path="/admin/upload"> <UploadPage/> </Route>
         </Switch>
-      </header>
+        <Footer />
     </div>
   );
 }
