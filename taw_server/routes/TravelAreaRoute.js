@@ -19,5 +19,14 @@ router.post('/add', (req, res) => {
   })
 })
 
+router.get('/list', (req, res) => {
+  
+  TravelArea.find()
+    .exec((err, doc) => {
+      if (err) return res.status(400).send(err)
+    res.status(200).json({success:true, doc})
+  })
+})
+
 
 module.exports = router
