@@ -8,13 +8,12 @@ import BulletinPage from './components/BulletinPage'
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
 
-import UploadPage from './components/admin/uploadPage';
+import UploadPage from './components/admin/UploadPage';
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <Switch>
           <Route exact path="/"> <LandingPage /> </Route>
           <Route path="/detail"> <DetailPage /> </Route>
@@ -24,7 +23,6 @@ function App() {
           <Route path="/register"><RegisterPage/> </Route>
           <Route path="/admin/upload"> <UploadPage/> </Route>
         </Switch>
-      </header>
     </div>
   );
 }
