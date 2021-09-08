@@ -64,7 +64,7 @@ const ImageUpload = () => {
     <div className="img__container">
       <div className="img__area">
         {imgBase64
-          ? <img src={imgBase64}></img>
+          ? <img src={imgBase64} alt="사진"></img>
           : <div></div>
         }  
       </div>
