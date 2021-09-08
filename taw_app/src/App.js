@@ -5,11 +5,11 @@ import DetailPage from './components/DetailPage';
 import MapPage from './components/MapPage';
 import FavoritePage from './components/FavoritePage';
 import BulletinPage from './components/BulletinPage'
-import Header from './components/common/Header';
+import Header from './components/common/header';
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
-import UploadPage from './components/admin/UploadPage';
-import Footer from './components/common/Footer';
+import UploadPage from './components/admin/uploadPage';
+import Footer from './components/common/footer';
 
 function App() {
   return (
