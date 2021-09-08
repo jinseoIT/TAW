@@ -76,7 +76,6 @@ function DetailPage() {
 
     return (
         <div>
-            <Header />
             <div className="detail-bg-img">
                 <div className="detail-bg-txt">{detail[3].title}</div>
             </div>
