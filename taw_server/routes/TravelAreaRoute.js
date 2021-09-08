@@ -28,5 +28,18 @@ router.get('/list', (req, res) => {
   })
 })
 
+router.get('/detail', (req, res) => {
+  console.log(req.body);
+  TravelArea.findOne({ "uuid": req.body.uuid }, (err, travelArea) => {
+    console.log(travelArea);
+    if (!travelArea)
+      return res.json({
+        success: false,
+        message: "travelArea not fuond"
+      });
+    res.status(200).json({success:true, travelArea})
+  })
+})
+
 
 module.exports = router
