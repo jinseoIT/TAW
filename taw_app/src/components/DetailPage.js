@@ -68,9 +68,7 @@ function DetailPage() {
 
     // }, [])
 
-    useEffect(() => {
-        console.log('gg')
-    }, [])
+    
         
     
 
