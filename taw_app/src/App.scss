@@ -41,6 +41,7 @@ ul, li, ol {
    content: "";
 }
 
+
 // CONTENT
 
 .bg-img {
@@ -48,12 +49,13 @@ ul, li, ol {
    background-size: cover;
    background-position: center;
    width: 100vw;
-   height: 100vh;
+   height: 600px;
 }
 
 .con-wrap {
    width: 1240px;
    margin: 100px auto 300px;
+   
 
    .more-button {
       background-color: #3BC9DB;
@@ -61,6 +63,7 @@ ul, li, ol {
       width: 100px;
       height: 30px;
       margin: 100px auto;
+      
 
       button {
          border: none;
@@ -73,6 +76,7 @@ ul, li, ol {
    .con-title {
       font-size: 23px;
       margin-bottom: 30px;
+      font-family: 'notoSans';
    }
 
    .con-list ul {
@@ -97,6 +101,10 @@ ul, li, ol {
          position: absolute;
          bottom: 24px;
          left: 20px;
+         
+         div {
+            font-family: 'notosans';  
+         }
 
          .con-list-box-txt {
             border: 1px solid #fff;
@@ -104,6 +112,7 @@ ul, li, ol {
             margin-top: 8px;
             padding: 5px 15px;
             font-size: 12px;
+            font-family: 'notoSans';
          }
       }
       
@@ -111,5 +120,3 @@ ul, li, ol {
 
    
 }
-
-

@@ -1,0 +1,25 @@
+.fav-wrap {
+    width: 1240px;
+    margin: 200px auto;
+
+    .fav-title {
+        font-size: 20px;
+        margin-bottom: 50px;
+        font-family: 'notoSans';
+    }
+
+    .fav-con {
+        .fav-con-wrap {
+
+            div {
+                display: grid;
+                grid-template-columns: 200px 200px 200px 200px;
+                grid-template-rows: 50px 50px;
+                font-family: 'notosans';  
+            }
+            .fav-con-title {
+                background-color: #ddd;
+            }
+        }
+    }
+}

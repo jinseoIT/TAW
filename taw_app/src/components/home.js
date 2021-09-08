@@ -4,6 +4,8 @@ import React from 'react'
 function Home() {
     return (
         <div>
+            <div className="bg-img">
+            </div>
             <div className="con-wrap">
                 <div className="con-title">여행지 둘러보기</div>
                     <div className="con-list">
