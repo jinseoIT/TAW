@@ -66,7 +66,12 @@
              margin-top: 8px;
              padding: 5px 15px;
              font-size: 12px;
-             font-family: 'notoSans';
+             cursor: pointer;
+            
+             
+             &:hover{
+                background-color: #3BC9DB;
+             }
           }
        }
        

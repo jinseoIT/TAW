@@ -3,6 +3,7 @@ import './DetailPage.scss'
 import Header from './common/Header'
 import axios from 'axios'
 
+
 function DetailPage(props) { 
     console.log(props)
     const uuid = props.match.params.uuid
