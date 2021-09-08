@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/"> <LandingPage /> </Route>
-          <Route path="/detail/:travelId"> <DetailPage /> </Route>
+          <Route path="/detail/:uuid" component={DetailPage}/>
           <Route path="/map"> <MapPage/> </Route>
           <Route path="/favorite"> <FavoritePage/> </Route>
           <Route path="/bulletin"> <BulletinPage/> </Route>
