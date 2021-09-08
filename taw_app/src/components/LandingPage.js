@@ -8,6 +8,7 @@ import GridCard from './common/GridCard';
 
 
 
+
 function LandingPage() {
 
     let [데이터, 데이터변경] = useState([]);
@@ -39,6 +40,7 @@ function LandingPage() {
                         </ul>
                     </div>
                 <div className="more-button"><button>더보기</button></div>
+                
             </div>
         </div>
     )

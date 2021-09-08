@@ -2,8 +2,8 @@ import React, { useState , useEffect} from 'react'
 import Header from './common/Header'
 import './DetailPage.scss'
 
-function DetailPage() {
-
+function DetailPage(props) {
+    console.log(props)
     const [detail, setDetail] = useState([
     
         {
@@ -54,7 +54,7 @@ function DetailPage() {
     ])
 
     useEffect(() => {
-        console.log('123');
+        
     }, [])
         
     

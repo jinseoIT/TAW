@@ -8,7 +8,7 @@ import BulletinPage from './components/BulletinPage'
 import Header from './components/common/Header';
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
-import UploadPage from './components/admin/UploadPage';
+import UploadPage from './components/admin/uploadPage';
 import Footer from './components/common/Footer';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/"> <LandingPage /> </Route>
-          <Route path="/detail"> <DetailPage /> </Route>
+          <Route path="/detail/:uuid"  component={DetailPage} />
           <Route path="/map"> <MapPage/> </Route>
           <Route path="/favorite"> <FavoritePage/> </Route>
           <Route path="/bulletin"> <BulletinPage/> </Route>
