@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './common/Header'
-import Footer from './common/Footer'
+import Header from './common/header'
+import Footer from './common/footer'
 import './FavoritePage.scss'
 
 function FavoritePage() {
