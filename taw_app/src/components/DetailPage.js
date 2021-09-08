@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import Header from './common/Header'
-import Footer from './common/Footer'
 import './DetailPage.scss'
 
 function DetailPage() {
@@ -53,6 +52,10 @@ function DetailPage() {
         },
 
     ])
+
+    useEffect(() => {
+        console.log('123');
+    }, [])
         
     
 
