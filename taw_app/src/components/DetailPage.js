@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './DetailPage.scss'
+import Header from './common/Header'
+import axios from 'axios'
 
 function DetailPage() { 
 
+    const uuid = 'f08b6e78-a83f-455f-9718-2d3566cd924a';
     const [detail, setDetail] = useState([
     
         {
@@ -52,21 +55,20 @@ function DetailPage() {
 
     ])
 
-    // useEffect(() => {
-    //      console.log('useEffect')
-    //     // axios.get('/api/travelArea/Detail', { 
-    //     //     data: { 
-    //     //         uuid: "f08b6e78-a83f-455f-9718-2d3566cd924a"
-    //     //      } }) 
-    //     // .then(res => {
-    //     //     console.log(res)
-    //     //     alert('호출 성공')
-    //     // }) 
-    //     // .catch(function (error) { 
-    //     //     console.log(error); 
-    //     // })
 
-    // }, [])
+    useEffect(() => { 
+        console.log('useEffect') 
+        axios.get(`/api/travelArea/Detail?uuid=${uuid}`) 
+        .then(res => { 
+            console.log(res); 
+            alert('호출 성공') 
+        })
+        .catch(function (error) {
+            console.log(error);
+        }) }, 
+        [])
+
+   
 
     
         
@@ -74,6 +76,7 @@ function DetailPage() {
 
     return (
         <div>
+            <Header />
             <div className="detail-bg-img">
                 <div className="detail-bg-txt">{detail[3].title}</div>
             </div>
