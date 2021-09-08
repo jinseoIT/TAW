@@ -11,7 +11,7 @@
     width: 1240px;
     margin: 100px auto 300px;
     
- 
+
     .more-button {
        background-color: #3BC9DB;
        border-radius: 5px;
@@ -27,13 +27,13 @@
           margin: 7px 30px;
        }
     }
- 
+
     .con-title {
        font-size: 23px;
        margin-bottom: 30px;
        font-family: 'notoSans';
     }
- 
+
     .con-list ul {
        display: grid;
        grid-template-columns: repeat(4, 1fr);
@@ -41,7 +41,7 @@
        grid-column-gap: 50px;
        grid-row-gap: 50px;
     }
- 
+
     .con-list ul li{
        position: relative;
        background-image: url('../img/333.jpeg');
