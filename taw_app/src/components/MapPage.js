@@ -1,11 +1,53 @@
-import React from 'react'
+/*global kakao*/
+import React, { useEffect } from 'react';
+import './MapPage.scss';
 
-function MapPage() {
-    return (
+
+const LoadMap = () => {
+	useEffect(() => {
+		const sampleLan = 37.3913538;
+		const sampleLon = 126.9646325;
+		const container = document.getElementById('map');
+		const options = {
+			center: new kakao.maps.LatLng(sampleLan, sampleLon),
+			level: 3,
+		};
+		const map = new kakao.maps.Map(container, options);
+
+        //add marker
+        const markerPosition  = new kakao.maps.LatLng(37.3913538, 126.9646325);
+        const marker = new kakao.maps.Marker({
+            position: markerPosition
+        }); 
+        marker.setMap(map);
+
+        // add marker-hover-event
+        const iwContent = document.getElementById("markerContent");
+        const infowindow = new kakao.maps.InfoWindow({
+            content : iwContent
+        });
+        kakao.maps.event.addListener(marker, 'mouseover', function() {
+            infowindow.open(map, marker);
+        });
+        kakao.maps.event.addListener(marker, 'click', function() {
+            console.log("click-event");
+        });
+        kakao.maps.event.addListener(map, 'click', function() {
+            infowindow.close();
+        });
+
+	}, []);
+
+	return (
         <div>
-            <h1>맵 페이지 입니다.맵 페이지 입니다.맵 페이지 입니다.맵 페이지 입니다.맵 페이지 입니다.맵 페이지 입니다.</h1>
+            <section className="map-container">
+                <h1 className="map-title">지도로 보기</h1>
+                <div id="map" style={{ width: '70vw', height: '60vh' }}></div>
+            </section>
+            <div id="markerContent">detail-text-init</div>
         </div>
-    )
-}
+	);
+};
 
-export default MapPage
+
+export default LoadMap
