@@ -9,17 +9,17 @@ function Header() {
             <div>
                 <header className="header">
                     <div className="header-inner">
-                        <h1><a href="">LOGO</a></h1>
+                        <h1><Link to="/">LOGO</Link></h1>
                         <nav>
                             <ul className="menu-tab">
-                                <li><a href="">지도로 보기</a></li>
-                                <li><a href="">게시판</a></li>
+                                <li><Link to="/map">지도로 보기</Link></li>
+                                <li><Link to="/bulletin">게시판</Link></li>
                             </ul>
                         </nav>
                         <div className="sign-box">
                             <ul>
-                                <li><a href="">로그인</a></li>
-                                <li><a href="">회원가입</a></li>
+                                <li><Link to="/login">로그인</Link></li>
+                                <li><Link to="/register">회원가입</Link></li>
                             </ul>
                         </div>
                     </div>
