@@ -8,7 +8,7 @@ import BulletinPage from './components/BulletinPage'
 import Header from './components/common/Header';
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
-import UploadPage from './components/admin/uploadPage';
+import UploadPage from './components/admin/UploadPage';
 import Footer from './components/common/Footer';
 
 function App() {
