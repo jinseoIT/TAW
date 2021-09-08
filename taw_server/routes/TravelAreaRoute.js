@@ -29,8 +29,8 @@ router.get('/list', (req, res) => {
 })
 
 router.get('/detail', (req, res) => {
-  console.log(req.body);
-  TravelArea.findOne({ "uuid": req.body.uuid }, (err, travelArea) => {
+  console.log(req.query.uuid);
+  TravelArea.findOne({ "uuid": req.query.uuid }, (err, travelArea) => {
     console.log(travelArea);
     if (!travelArea)
       return res.json({
