@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
-import Header from './common/Header'
-import Footer from './common/Footer'
+import React, { useState, useEffect } from 'react'
 import './DetailPage.scss'
+import Header from './common/Header'
+import axios from 'axios'
 
-function DetailPage() {
 
+function DetailPage(props) { 
+    console.log(props)
+    const uuid = props.match.params.uuid
+
+    const [travelInfo, setTravelInfo] = useState({})
+    console.log(travelInfo)
     const [detail, setDetail] = useState([
     
         {
@@ -53,26 +58,43 @@ function DetailPage() {
         },
 
     ])
+
+    console.log(1, travelInfo)
+    useEffect(() => { 
+        console.log('useEffect') 
+        axios.get(`/api/travelArea/Detail?uuid=${uuid}`) 
+        .then(res => { 
+            console.log(res.data); 
+            console.log(res.data.travelArea); 
+            setTravelInfo(res.data.travelArea)
+            
+        })
+        .catch(function (error) {
+            console.log(error);
+        }) }, 
+        [])
+
+   
+
+    
         
     
 
     return (
         <div>
-            <Header />
-            <div className="detail-bg-img">
-                <div className="detail-bg-txt">{detail[3].title}</div>
+            <div className="detail-bg-img" style={{ backgroundImage: `url(${travelInfo.imgUrl})`}}>
+                <div className="detail-bg-txt">{travelInfo.title}</div>
             </div>
             <div className="detail-wrap">
                 <div className="detail-img">
-                    <img src="https://www.gyeongju.go.kr/upload/content/thumb/20200317/A9E0A9F412B84EC68D1893C36D01E942.jpg" alt="" />
+                    <img src={travelInfo.imgUrl} alt={travelInfo.title} />
                 </div>
                 <div className="detail-txt-box">
-                    <div className="detail-tit">{detail[3].title}</div>
-                    <div className="detail-sum">{detail[3].summary}</div>
-                    <div className="detail-desc">{detail[3].description}</div>
+                    <div className="detail-tit">{travelInfo.title}</div>
+                    <div className="detail-sum">{travelInfo.summary}</div>
+                    <div className="detail-desc">{travelInfo.description}</div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
