@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
 function GridCard(props) {
-    console.log(props.데이터)
+   // console.log(props.데이터)
     let history = useHistory();
     const goToDetailPage = ()=>{
         history.push('/detail/'+ props.데이터.uuid)
@@ -17,7 +17,7 @@ function GridCard(props) {
                 
                     <div className="con-list-box">
                         <div className="con-list-box-title">{props.데이터.title}</div>
-                        <button className="con-list-box-txt" onClick={goToDetailPage}>+ 더보기</button>
+                        <button className="con-list-box-txt" onClick={goToDetailPage}>상세 보기</button>
                     </div>
                 
             </li>
