@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './DetailPage.scss'
-import Header from './common/header'
+import Header from './common/Header'
 import axios from 'axios'
 
 

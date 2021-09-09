@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Header from './common/header'
+import Header from './common/Header'
 import './LandingPage.scss'
 import axios from 'axios';
 import GridCard from './common/GridCard';
