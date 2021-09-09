@@ -67,6 +67,7 @@ app.use(cookieParser());
 app.get("/", (req, res) => res.send("Hello Travel After Work"))
 
 app.use('/api/travelArea', require('./routes/TravelAreaRoute'))
+app.use('/api/user', require('./routes/users'))
 
 const port = process.env.PORT || 3005
 

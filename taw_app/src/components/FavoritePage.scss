@@ -10,23 +10,47 @@
 
     .fav-con {
         .fav-con-wrap {
-            border-top: 2px solid #999;
-            border-left: 2px solid #999;
+            display: table;
+            width: 1240px;
 
-            div {
-                display: grid;
-                grid-template-columns: 25% 25% 25% 25%;
-                font-family: 'notosans'; 
-                border-right: 2px solid #999;
-                
+            .fav-con-txt {
+                display: table-row;
             }
 
-            .fav-con-list {
-                border-bottom: 2px solid #999;
+            .fav-con-txt:first-child {
+                background: #999;
+                color: #fff;
+                font-weight: 900;
             }
 
             .fav-con-title {
                 background-color: #ddd;
+            }
+
+            .fav-con-list {
+                display: table-cell;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+
+                button {
+                    cursor: pointer;
+                }
+            }
+
+            .fav-con-list.col {
+                width: 20%;
+            }
+            
+            .fav-con-list.col2 {
+                width: 45%;
+            }
+
+            .fav-con-list.col3 {
+                width: 20%;
+            }
+
+            .fav-con-list.col4 {
+                width: 15%;
             }
         }
     }
