@@ -20,9 +20,18 @@ const TravelUpload = () => {
     setTravelInfo({ ...travelInfo, [name]: value });
   }
 
+  const radioChnage = (e) => {
+
+    const value = Number(e.target.value);
+    setTravelInfo({ ...travelInfo, insideYn: value })
+  }
+
   const handleSubmit = async (e) => {
-    console.log('submit!');
     e.preventDefault();
+    if (emptyChk()) {
+      alert('빈값을 확인해주세요.')
+      return;
+    }
     const endPoint = "/api/travelArea/add";
     axios({
       url: endPoint,
@@ -36,6 +45,16 @@ const TravelUpload = () => {
       .then(err => {
         console.log(err);
       })
+  }
+
+  const emptyChk = () => {
+    const objKeys = Object.keys(travelInfo);
+    let rtn = false;
+    for (const objKey of objKeys) {
+      if (travelInfo[objKey] ==='')
+        rtn = true;
+      }
+    return rtn;
   }
 
   return (
@@ -53,13 +72,13 @@ const TravelUpload = () => {
         <label>부제목(Summary)</label>
         <input type="text" value={travelInfo.summary} name="summary" onChange={handleChange}/>
         <label>내용(Description)</label>
-        <textarea name="description" onChange={handleChange}>{travelInfo.description}</textarea>
+        <textarea name="description" onChange={handleChange}defaultValue={travelInfo.description}></textarea>
         <label>지역(region)</label>
         <input type="text" value={travelInfo.region} name="region" onChange={handleChange}/>
         <label>실내외(insideYn)</label>
-        <input type="radio" name="insideYn" value={1} checked />
+        <input type="radio" name="insideYn" value={1} checked={travelInfo.insideYn === 1} onChange={radioChnage}/>
         <span>실내</span>
-        <input type="radio" name="insideYn" value={0} />
+        <input type="radio" name="insideYn" value={0} checked={travelInfo.insideYn === 0} onChange={radioChnage}/>
         <span>실외</span>
         <button onSubmit={handleSubmit}>등록</button>
       </form>
