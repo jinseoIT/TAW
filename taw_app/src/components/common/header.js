@@ -21,7 +21,8 @@ function Header() {
                 }
             })
     }
-    let accountArea    
+    let accountArea;
+    let addNavList;
     if (!localStorage.getItem('userId')) {
        accountArea =
          <ul>
@@ -29,7 +30,11 @@ function Header() {
            <li><Link to="/register">회원가입</Link></li>
          </ul>
     } else {
-      accountArea = <ul><li onClick={onClickHandler}>로그아웃</li></ul>   
+      accountArea = <ul>
+        <li>나의 찜 목록</li>
+        <li onClick={onClickHandler}>로그아웃</li>
+        </ul>;
+      addNavList = <li><Link to="/admin/upload">여행지 등록</Link></li>
     }
     
     
@@ -44,6 +49,7 @@ function Header() {
                             <ul className="menu-tab">
                                 <li><Link to="/map">지도로 보기</Link></li>
                                 <li><Link to="/bulletin">게시판</Link></li>
+                                {addNavList}
                             </ul>
                         </nav>
                         <div className="sign-box">
