@@ -6,7 +6,7 @@ const { User } = require('../models/User');
 //const { auth } = require('../middleware.auth');
 
 router.post('/register', (req, res) => {
-  
+  console.log('회원가입 시도...');
   const user = new User(req.body);
 
   user.save((err, doc) => {
@@ -19,6 +19,7 @@ router.post('/register', (req, res) => {
 
 router.post('/login', (req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
+    console.log('로그인 시도...');
     // 이메일 유무 체크
     if (!user) {
       return res.json({

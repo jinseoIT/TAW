@@ -10,6 +10,7 @@ import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
 import UploadPage from './components/admin/UploadPage';
 import Footer from './components/common/Footer';
+import BulletinViewPage from './components/BulletinViewPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/map"> <MapPage/> </Route>
           <Route path="/favorite"> <FavoritePage/> </Route>
           <Route path="/bulletin"> <BulletinPage/> </Route>
+          <Route path="/bulletin/:no" component={BulletinViewPage}/>
           <Route path="/login"> <LoginPage/> </Route>
           <Route path="/register"><RegisterPage/> </Route>
           <Route path="/admin/upload"> <UploadPage/> </Route>
