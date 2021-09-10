@@ -1,10 +1,17 @@
 /*global kakao*/
 import React, { useEffect } from 'react';
 import './MapPage.scss';
+import axios from 'axios';
 
 
 const LoadMap = () => {
 	useEffect(() => {
+        axios.get('http://localhost:3005/api/travelArea/list')
+        .then((response)=>{  
+            let result = response.data.doc
+            console.log(result);
+        })
+        .catch((err)=> (err, "요청 실패.") )
 		const sampleLan = 37.3913538;
 		const sampleLon = 126.9646325;
 		const container = document.getElementById('map');
