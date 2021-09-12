@@ -23,13 +23,30 @@
     margin: 120px auto;
     font-family: 'notoSans';
 
-    .detail-img img {
-        width: 1240px;
-        margin-bottom: 80px;
+    .detail-img {
+
+        img {
+            width: 1240px;
+            margin-bottom: 80px;
+        }
+
+
     }
 
     .detail-txt-box {
         text-align: center;
+        position: relative;
+
+        .fa-bookmark {
+            font-size: 30px;
+            position: absolute;
+            top: 0;
+            right: 15px;
+        }
+
+        .fa-bookmark:hover {
+            cursor: pointer;
+        }
     }
 
     div {

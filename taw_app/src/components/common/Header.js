@@ -7,6 +7,14 @@ import { useHistory } from "react-router-dom"
 import { useSelector, useDispatch } from 'react-redux'
 
 function Header() {
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', updateScroll);
+    })
     const history = useHistory();
     const { loginSuccess } = useSelector(state => state.account)    
 
@@ -43,17 +51,19 @@ function Header() {
         <div>
             <div>
                 <header className="header">
-                    <div className="header-inner">
-                        <h1><Link to="/">LOGO</Link></h1>
-                        <nav>
-                            <ul className="menu-tab">
-                                <li><Link to="/map">지도로 보기</Link></li>
-                                <li><Link to="/bulletin">게시판</Link></li>
-                                {addNavList}
-                            </ul>
-                        </nav>
-                        <div className="sign-box">
-                        { accountArea}
+                    <div className={scrollPosition < 100 ? 'header' : 'change-header'} >
+                        <div className="header-inner">
+                            <h1><Link to="/">LOGO</Link></h1>
+                            <nav>
+                                <ul className="menu-tab">
+                                    <li><Link to="/map">지도로 보기</Link></li>
+                                    <li><Link to="/bulletin">게시판</Link></li>
+                                    {addNavList}
+                                </ul>
+                            </nav>
+                            <div className="sign-box">
+                            { accountArea}
+                            </div>
                         </div>
                     </div>
                 </header>
